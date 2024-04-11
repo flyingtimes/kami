@@ -59,7 +59,7 @@ class OrderService
     {
         $validator = Validator::make($request->all(), [
             'gid' => 'required' ,
-            'email' => ['required', 'email'],
+            'email' => ['required', 'email','email_provider:gd.chinamobile.com'],
             'payway' => ['required', 'integer'],
             'search_pwd' => [new SearchPwd()],
             'by_amount' => ['required', 'integer', 'min:1'],
